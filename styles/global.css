@@ -1,0 +1,103 @@
+/* global.css - Golden Black Theme for Realtime Notes App */
+
+:root {
+--bg-color: #121212;           /* Deep black background */
+--card-color: #1e1e1e;         /* Slightly lighter black for cards */
+--text-color: #f5d76e;         /* Golden text */
+--placeholder-color: #bfa76a;  /* Muted gold for placeholders */
+--accent-color: #f5d76e;       /* Buttons & highlights */
+--border-color: #333;           /* Subtle border */
+--active-user-color: #ffd700;  /* Bright gold for active users */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', Helvetica, sans-serif;
+  }
+
+body {
+background-color: var(--bg-color);
+color: var(--text-color);
+line-height: 1.5;
+min-height: 100vh;
+}
+
+a {
+color: var(--accent-color);
+text-decoration: none;
+}
+
+input, textarea {
+font-family: inherit;
+background-color: var(--card-color);
+color: var(--text-color);
+border: 1px solid var(--border-color);
+border-radius: 6px;
+padding: 0.5rem;
+width: 100%;
+outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+color: var(--placeholder-color);
+}
+
+button {
+cursor: pointer;
+background-color: var(--accent-color);
+border: none;
+padding: 0.5rem 1rem;
+border-radius: 6px;
+color: #121212;
+font-weight: bold;
+transition: 0.2s;
+}
+
+button:hover {
+background-color: #e6c150; /* Slightly brighter gold on hover */
+}
+
+.container {
+max-width: 900px;
+margin: 2rem auto;
+padding: 1rem;
+}
+
+.card {
+background-color: var(--card-color);
+padding: 1rem;
+border-radius: 8px;
+margin-bottom: 1rem;
+box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+textarea {
+min-height: 300px;
+resize: vertical;
+font-size: 1rem;
+line-height: 1.4;
+}
+
+.active-users {
+display: flex;
+gap: 0.5rem;
+margin-top: 0.5rem;
+}
+
+.active-user-badge {
+background-color: var(--active-user-color);
+color: #121212;
+padding: 0.2rem 0.5rem;
+border-radius: 4px;
+font-size: 0.8rem;
+}
+
+.last-updated {
+font-size: 0.8rem;
+color: var(--placeholder-color);
+margin-top: 0.5rem;
+text-align: right;
+}
